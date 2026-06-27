@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+
+<h1>🎓 Student Management System</h1>
+<input type="text" id="username" placeholder="Username"><br><br>
+
+<input type="password" id="password" placeholder="Password"><br><br>
+
+<button onclick="login()">Login</button>
+
+<script>
+function login() {
+
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    if(username === "admin" && password === "1234") {
+        window.location.href = "index.html";
+    }
+    else {
+        alert("Invalid Username or Password");
+    }
+}
+</script>
+
+</body>
+</html>

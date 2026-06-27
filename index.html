@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="header">
+    <h1>🎓 Student Management System</h1>
+</div>
+    <button class="logout-btn" onClick="logout()">Logout</button>
+    <button class="dark-btn" onClick="togglerDarkMode()">🌙DarkMode</button>
+    <h3 id="datetime"></h3>
+    <h2 id="welcome"></h2>
+    <div class="stats-container">
+    <div class="card">
+        <h3>CSE Students</h3>
+        <h2 id="cseCount">0</h2>
+    </div>
+
+    <div class="card">
+        <h3>CSD Students</h3>
+        <h2 id="csdCount">0</h2>
+    </div>
+
+    <div class="card">
+        <h3>CSM Students</h3>
+        <h2 id="csmCount">0</h2>
+    </div>
+</div>
+    <div>
+        <h3>Total Students</h3>
+        <h1 id ="studentCount">0</h1>
+    </div>
+    <input type="text" id="studentId" placeholder="Student ID">
+    <input type="text" id="studentName" placeholder="Student Name">
+    <input type="text" id="studentBranch" placeholder="Branch">
+
+    <button onclick="addStudent()">Add Student</button>
+    <br><br>
+    <input type="text" id="searchInput"
+            placeholder="Search Student"
+            onkeyup="searchStudent()">
+    <h3>Total Students:<span id="studentCount">0</span></h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Branch</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="studentTable"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
